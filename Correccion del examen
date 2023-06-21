@@ -1,3 +1,6 @@
+//2. Dado el siguiente algoritmo,indique que linea se puede modificar para el seudocodigo
+//imprime un triangulo de * tal comop se indica en la salida?
+//Nota: EWScribir "ok" sin saltar // se imprime ok y el cursor se queda en la misma linea.	
 Algoritmo trianguloDeAsteriscos
 	Definir n, i, j Como Entero
 	n=5
@@ -8,3 +11,56 @@ Algoritmo trianguloDeAsteriscos
 		Escribir "" 
 	FinPara
 FinAlgoritmo
+
+//3. ¿Cual es el resultado que presenta la variable x en el siguiente seudocodigo?
+Funcion expresion()
+	Definir a, b, x Como Entero
+	a=3 ; b=6
+	x=a+a*(a+b)-b*a+(trunc(b/3)-2+a*(a mod 2))
+	Escribir x
+FinFuncion
+Algoritmo correccion
+	expresion()
+FinAlgoritmo
+
+//4. Analice las siguientes lineas de programa y escriba ¿cual es la respuesta que genera m y n?
+Funcion presentar()
+	Definir n, m, r como entero 
+	n=15; m=25; r=1
+	Mientras (r<>0) hacer 
+		r=m mod n
+		si (r=0) Entonces
+			Escribir "m = ", m, "; n = ", n
+		SiNo
+			n=m
+			m=r
+		FinSi
+	FinMientras
+FinFuncion
+Algoritmo correccion2
+	presentar()
+FinAlgoritmo
+
+//6. Elaborar un algoritmo tal, que dado un nombre y la edad en años.Calcule
+Algoritmo pulsaciones
+	Definir nom Como Caracter
+	Definir edad como entero 
+	Definir puls Como Real
+	Escribir "Ingrese su nombre"
+	Leer nom
+	Escribir "Ingrese su edad "
+	Leer edad
+	Si edad < 10 Entonces
+		puls = (200-edad)/10
+	SiNo
+		si edad >= 10 y edad < 18 Entonces
+			puls = (220 - edad)/15
+		SiNo
+			si edad >=18 Entonces
+				puls = (200-edad/20)
+			FinSi
+		FinSi
+	FinSi
+Escribir nom " de " edad " años de edad tiene pulsaciones por segundo de " puls
+FinAlgoritmo
+
