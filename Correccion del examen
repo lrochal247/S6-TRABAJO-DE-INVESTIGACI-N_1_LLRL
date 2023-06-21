@@ -41,6 +41,36 @@ Algoritmo correccion2
 	presentar()
 FinAlgoritmo
 
+//5.Realizar un seudocodigo que permitira verificar si la cantidad de paréntesis es proporcional dentro de una expresion matematicas.
+//La expresion se ingresa caracter por carcacter. A final debera mostrar un mensaje si la expresion tiene la misma cantidad de parentesis o no.
+//El algoritmo termina cuando se ingresa el caracter ".".
+//Ejemplo: si la expresion= "(4+2)*5+(5+2)" presentar "Numero de parentesis correcto"
+//Ejemplo: si la expresion= "(4+2)*5+(5-2" presentar "Error número de paréntesis incorrectos"
+Algoritmo verificarParentesis
+    Definir expresion, caracter Como Caracter
+    Definir contadorParentesis Como Entero
+	
+    Escribir "Ingrese la expresión matemática (carácter por carácter). Ingrese . para finalizar: "
+    Leer expresion
+	
+    contadorParentesis <- 0
+	
+    Mientras expresion <> "." Hacer
+        Si expresion = "(" Entonces
+            contadorParentesis <- contadorParentesis + 1
+        FinSi
+        Si expresion = ")" Entonces
+            contadorParentesis <- contadorParentesis - 1
+        FinSi
+        Leer caracter
+    FinMientras
+	
+    Si contadorParentesis = 0 Entonces
+        Escribir "Número de paréntesis correcto."
+    Sino
+        Escribir "Error: Número de paréntesis incorrectos."
+    FinSi
+FinAlgoritmo
 //6. Elaborar un algoritmo tal, que dado un nombre y la edad en años.Calcule
 Algoritmo pulsaciones
 	Definir nom Como Caracter
