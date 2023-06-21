@@ -64,3 +64,30 @@ Algoritmo pulsaciones
 Escribir nom " de " edad " años de edad tiene pulsaciones por segundo de " puls
 FinAlgoritmo
 
+//7. Elaborar un seudocodigo que dado una serie de numeros presente aquellos numeros 
+//que son multiplos de 2 y tambien de 5, al final debera presentar la suma de los numeros
+//multiplos de 3 positivos
+//Ejemplo: serie= 20,13,5,10,21,-3,9
+//Respuesta: Presentar multiplo2_5= 20 10
+//	       Presentar suma_multiplos_3_positivos(21+9)=30
+Algoritmo multiplo2y5
+    Definir cantidad, num,  suma_multiplos3_positivos Como Entero
+	Definir multiplo2, multiplo5 Como Real
+    Escribir "Ingrese la cantidad de números de la serie: "
+    Leer cantidad
+    Escribir "Ingrese los números de la serie: "
+    Para i <- 1 Hasta cantidad Hacer
+        Leer num
+        Si (num mod 2=0 ) Y (num MOD 5 = 0) Entonces
+            Escribir num, " es múltiplo de 2 y 5."
+            multiplo2 <- multiplo2 + 1
+            multiplo5 <- multiplo5 + 1
+        FinSi
+        Si (num > 0) Y (num MOD 3 = 0) Entonces
+            suma_multiplos3_positivos <- suma_multiplos3_positivos + num
+        FinSi
+    FinPara
+	
+    Escribir "Presentar multiplo2_5 =", multiplo2, multiplo5
+    Escribir "Presentar suma_multiplos_3_positivos ", suma_multiplos3_positivos 
+FinAlgoritmo
